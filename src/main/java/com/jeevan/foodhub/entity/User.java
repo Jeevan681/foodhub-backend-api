@@ -17,22 +17,29 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long id;
+    private Long id;
 
     private String name;
-    @Column(unique = true,nullable = false)
+
+    @Column(unique = true, nullable = false)
     private String email;
 
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @Builder.Default
+    @Column(nullable = false)
+    private Boolean blocked = false;
+
     @OneToOne(
             mappedBy = "user",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     private Cart cart;
+
     @OneToMany(
             mappedBy = "user",
             cascade = CascadeType.ALL,
@@ -41,6 +48,7 @@ public class User {
     )
     @Builder.Default
     private List<Address> addresses = new ArrayList<>();
+
     @OneToMany(
             mappedBy = "user",
             cascade = CascadeType.ALL,
@@ -49,6 +57,7 @@ public class User {
     )
     @Builder.Default
     private List<Review> reviews = new ArrayList<>();
+
     @OneToMany(
             mappedBy = "user",
             cascade = CascadeType.ALL,
@@ -57,7 +66,4 @@ public class User {
     )
     @Builder.Default
     private List<Favorite> favorites = new ArrayList<>();
-
-    @Column(nullable = false)
-    private Boolean blocked = false;
 }

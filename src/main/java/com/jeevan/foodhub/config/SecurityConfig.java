@@ -61,9 +61,10 @@ public class SecurityConfig {
                 .authenticationProvider(authenticationProvider())
                 .authorizeHttpRequests(auth -> auth
 
+                        .requestMatchers(HttpMethod.POST, "/api/users/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
+
                         .requestMatchers(
-                                "/api/users/register",
-                                "/api/auth/login",
                                 "/api/upload/**",
                                 "/uploads/**",
                                 "/v3/api-docs/**",
