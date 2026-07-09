@@ -1,0 +1,42 @@
+[
+  {
+    "restaurant": "Pizza Hut",
+    "name": "Margherita Pizza",
+    "description": "Classic cheese pizza",
+    "price": 299,
+    "category": "PIZZA",
+    "imageUrl": "margherita.jpg"
+  },
+  {
+    "restaurant": "Pizza Hut",
+    "name": "Farmhouse Pizza",
+    "description": "Loaded with vegetables",
+    "price": 399,
+    "category": "PIZZA",
+    "imageUrl": "farmhouse.jpg"
+  },
+  {
+    "restaurant": "Pizza Hut",
+    "name": "Pepsi",
+    "description": "Cold drink",
+    "price": 59,
+    "category": "DRINK",
+    "imageUrl": "pepsi.jpg"
+  },
+  {
+    "restaurant": "KFC",
+    "name": "Chicken Bucket",
+    "description": "8 pieces of crispy chicken",
+    "price": 699,
+    "category": "CHICKEN",
+    "imageUrl": "bucket.jpg"
+  },
+  {
+    "restaurant": "KFC",
+    "name": "Zinger Burger",
+    "description": "Spicy chicken burger",
+    "price": 249,
+    "category": "BURGER",
+    "imageUrl": "zinger.jpg"
+  }
+]
